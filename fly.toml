@@ -1,0 +1,14 @@
+app = "tcp-server"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[build]
+  image = "tcp-server:latest"
+
+[[services]]
+  internal_port = 6000
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 6000
